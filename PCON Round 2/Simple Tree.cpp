@@ -13,7 +13,7 @@ out time of the node in EulerTour, lazily in o(logn).
 
 Query can also be done in logn
 
-overall time complexity: o( n + qlogn).
+overall time complexity: O( nlogn + qlogn).
 
 */
 
