@@ -33,3 +33,16 @@ int main(int argc, char const *argv[]) {
 
 	return 0;
 }
+
+//equivalent python code
+
+for i in range(int(input())):
+    balls,boxes=map(int,input().split())
+    initial=(boxes*(boxes+1))//2
+    if(initial>balls):
+        print('-1')
+    else:
+        rem=balls-initial
+        for j in range(1,boxes):
+                print(j,end=' ')
+        print(boxes+rem)

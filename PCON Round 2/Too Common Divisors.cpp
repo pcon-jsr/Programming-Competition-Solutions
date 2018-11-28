@@ -32,3 +32,30 @@ int main(int argc, char const *argv[]) {
 
 	return 0;
 }
+
+
+//Equivalent python code
+
+import math
+def gcd(a,b):
+    if(b==0):
+        return(a)
+    else:
+        return(gcd(b,a%b))
+    
+for i in range(int(input())):
+    a,b=map(int,input().split())
+    count=0
+    if(a>b):
+       k=gcd(a,b)
+    else:
+      k=gcd(b,a) 
+    j=1
+    while(j<=math.sqrt(k)):
+          if(k%j==0):
+            if(k/j==j):
+                count=count+1
+            else: 
+                count=count+2
+          j=j+1      
+    print(count)
