@@ -44,3 +44,26 @@ int main(int argc, char const *argv[]) {
 
 	return 0;
 }
+
+//Equivalent python code
+
+d={}
+str_arr=[]
+a=[]
+for i in range(int(input())):
+    set_arr=set()
+    s=input()
+    str_arr.append(s)
+    l=len(s)
+    for j in range(l):
+        for k in range(j,l):
+            st=s[j:k+1]
+            set_arr.add(st)       
+    for ele in set_arr:
+        a.append(ele)    
+for stri in a:    
+            d[stri]=d.get(stri,0)+1            
+sum=0
+for i in str_arr:
+    sum=sum+d[i]-1
+print(sum)
